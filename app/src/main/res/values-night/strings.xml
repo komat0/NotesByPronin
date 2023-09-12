@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_note">ADD NOTE</string>
+    <string name="write_header_here">Write header here</string>
+    <string name="write_note_here">Write note here</string>
+    <string name="just_test">Just Test</string>
+</resources>
