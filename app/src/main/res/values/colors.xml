@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lime">#9CCC65</color>
+    <color name="green">#22AA28</color>
+    <color name="red">#B51310</color>
     <color name="lightCian">#A6F2FB</color>
     <color name="FullScreenFragmentBackground">#ECDDAF</color>
 </resources>

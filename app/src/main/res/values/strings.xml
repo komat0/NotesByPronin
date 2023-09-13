@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">NotesByPronin</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_note">ADD NOTE</string>
     <string name="write_header_here">Write header here</string>
     <string name="write_note_here">Write note here</string>
     <string name="just_test">Just Test</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
 </resources>

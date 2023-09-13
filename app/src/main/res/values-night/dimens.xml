@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="buttonMarginPort" />
+    <dimen name="buttonMarginPort">10dp</dimen>
+    <dimen name="headerText">30sp</dimen>
+    <dimen name="regularText">20sp</dimen>
+    <dimen name="buttonMarginLand">10dp</dimen>
+    <dimen name="headerTextLand">30sp</dimen>
+    <dimen name="regularTextLend">20sp</dimen>
 </resources>

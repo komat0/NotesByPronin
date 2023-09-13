@@ -16,43 +16,44 @@
             android:id="@+id/dateText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/buttonMarginPort"
             android:clickable="true"
-            android:gravity="center"
             android:text=""
-            android:textSize="@dimen/regularText"
+            android:textSize="@dimen/regularTextLend"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/noteHeader"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/noteHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/buttonMarginPort"
-            android:gravity="center"
             android:hint="@string/write_header_here"
             android:text=""
-            android:textSize="@dimen/regularText"
+            android:textSize="@dimen/regularTextLend"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/noteText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dateText" />
+            app:layout_constraintTop_toBottomOf="@id/dateText"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/noteText"
             android:layout_width="match_parent"
-            android:layout_height="530dp"
-            android:layout_marginTop="@dimen/buttonMarginPort"
-            android:gravity="top"
+            android:layout_height="0dp"
             android:hint="@string/write_note_here"
             android:text=""
-            android:textSize="@dimen/regularText"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/regularTextLend"
+            app:layout_constraintTop_toBottomOf="@id/noteHeader"
+            app:layout_constraintBottom_toTopOf="@+id/fullScreenBarrierLand"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noteHeader"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/fullScreenBarrierLand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonSave"
@@ -60,12 +61,11 @@
             android:layout_height="wrap_content"
             android:background="@color/green"
             android:text="@string/save"
-            android:textSize="@dimen/regularText"
-            android:onClick="onClickSaveButton"
+            android:textSize="@dimen/headerTextLand"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noteText" />
+            app:layout_constraintTop_toBottomOf="@id/fullScreenBarrierLand"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonDelete"
@@ -73,12 +73,11 @@
             android:layout_height="wrap_content"
             android:background="@color/red"
             android:text="@string/delete"
-            android:textSize="@dimen/regularText"
-            android:onClick="onClickDeleteButton"
+            android:textSize="@dimen/headerTextLand"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/buttonSave"
-            app:layout_constraintTop_toBottomOf="@+id/noteText" />
+            app:layout_constraintTop_toBottomOf="@id/fullScreenBarrierLand"
+            app:layout_constraintStart_toEndOf="@id/buttonSave"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

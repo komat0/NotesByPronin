@@ -1,23 +1,14 @@
-package com.example.notesbypronin
-
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
-class Note {
-    val currentTime = LocalDateTime.now()
-    private var id: Long = 0
-    private var date: LocalDateTime
-    private var header: String
-    private var note: String
-
-    constructor() {
-        this.id = id++
-        this.date = currentTime
-        this.header = ""
-        this.note = ""
-    }
+class Note(
+    private var currentTime: LocalDateTime,
+    private var header: String,
+    private var note: String,
+) {
 
     fun getDate(): LocalDateTime {
-        return this.date
+        return this.currentTime
     }
 
     fun getHeader(): String {
@@ -28,16 +19,23 @@ class Note {
         return this.note
     }
 
-    fun setGate(d: LocalDateTime) {
-        this.date = d
+    fun setCurrentTime(currentTime: LocalDateTime) {
+        this.currentTime = currentTime
     }
 
-    fun setHeader(h: String) {
-        this.header = h
+    fun setHeader(header: String) {
+        this.header = header
     }
 
-    fun setNote(n: String) {
-        this.note = n
+    fun setNote(note: String) {
+        this.note = note
     }
 
+    companion object {
+        fun currentDateTime(): String {
+            val current = LocalDateTime.now()
+            val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+            return current.format(formatter)
+        }
+    }
 }

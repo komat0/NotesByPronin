@@ -10,7 +10,6 @@ class FullScreenFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -19,4 +18,5 @@ class FullScreenFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_full_screen, container, false)
     }
+
 }
